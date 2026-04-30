@@ -1,4 +1,30 @@
-const sumAll = function() {
+const sumAll = function(firstNum, secondNum) {
+
+    let endValue = 0;
+    let startValue = 0;
+    if(firstNum > secondNum){
+        //assign firstNum as end value
+        endValue = firstNum;
+        startValue = secondNum;
+    }
+    else{
+        startValue = firstNum;
+        endValue = secondNum;
+    }
+
+    let sumArray = []; 
+
+    for(let i = startValue; i <= endValue; i++){
+        sumArray.push(i);
+    }
+
+
+    return sumArray.reduce((total, currentNum) => total + currentNum, 0)
+    
+    
+    
+
+
 
 };
 
