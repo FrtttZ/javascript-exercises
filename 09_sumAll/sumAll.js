@@ -2,10 +2,16 @@ const sumAll = function(firstNum, secondNum) {
 
     let endValue = 0;
     let startValue = 0;
-    if(firstNum < 0 || secondNum < 0){
+
+    // 
+    if(firstNum < 0 || 
+        secondNum < 0 ||
+        !Number.isInteger(firstNum) ||
+        !Number.isInteger(secondNum)
+    ){
         return 'ERROR';
     }
-    if(firstNum > secondNum){
+    else if(firstNum > secondNum){
         //assign firstNum as end value
         endValue = firstNum;
         startValue = secondNum;
